@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js ie lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
+  <script src='assets/js/jquery-1.9.1.min.js'></script>
+<script src='assets/js/modernizr.min.js'></script>
+
+  <link rel='stylesheet' href='assets/css/normalize.css'>
+<link rel='stylesheet' href='assets/css/style.css'>
+
+  <!--[if (lt IE 9) & (!IEMobile)]>
+    <link rel='stylesheet' href='assets/css/ie.css'>
+  <![endif]-->
+    
+  <link href="assets/images/favicon.ico" rel="shortcut icon">
+  <link href="assets/images/apple-touch-icon.png" rel="apple-touch-icon">
+  
+  <title>Andrew Hipp - Web &amp; Graphic Design - Redlands, CA</title>
+  
+</head>
+
+<body>
+  <div class="ie-checker">
+    <section class="row">
+      You are using an outdated browser and should upgrade to a newer one. To learn more visit <a href="http://browsehappy.com/">Browse Happy</a>.
+    </section>
+  </div>
+  <div id="wrapper" >
+  <header id="header">
+    <section class="row">
+      
+      <div class="title">
+
+
+        <h1><a href="/" class="ir">Andrew Hipp</a></h1>
+        
+        <h2><a href="http://www.linkedin.com/pub/andrew-hipp/32/457/254/" target="_blank"><i class="icon linkedin">Linkedin</i> Andrew Hipp</a></h2>
+
+        <ul class="contact">
+          <li><span title="Cell Phone">(530) 903-0280</span></li>
+          <li><a href="mailto:hello@andrewhipp.com" target="_blank">hello@andrewhipp.com</a></li>
+        </ul>
+
+      </div>
+      
+      <!-- include _nav -->
+    
+    </section>
+  </header>
+  <div id="main">
+  <section class="row">
+		
+	<aside id="sidebar" class="intro">
+		<h2>About Andrew Hipp</h2>
+
+		<p>I&rsquo;m a <b>web designer</b> and <b>front end developer</b> who lives in Redlands, CA. I&rsquo;ve been working as a web designer for several years with a heavy focus on mobile first <b>responsive web design</b>.</p>
+
+		<p>This is what you get when a humorous graphic designer falls in love with Web Design but plays with Illustration.</p>
+
+	</aside>		
+	
+	<ul class="portfolio">
+		<li class="project large">
+			<a href="portfolio/torden.html">
+				<img class="lazy shadow" data-original="assets/images/torden/torden-thumbnail-650x325.jpg" src="assets/images/spacer.gif" width="650" heigh="325">
+				<noscript><img src="assets/images/torden/torden-thumbnail-650x325.jpg" class="shadow" width="650" heigh="325" alt=""></noscript>
+			</a>
+		</li>
+		<li class="project">
+			<a href="portfolio/gubler-orchids-site.html">
+				<img class="lazy shadow" data-original="assets/images/gubler-orchids-site/gubler-orchids-site-thumbnail-320x160.jpg" src="assets/images/spacer.gif" width="320" heigh="160">
+				<noscript><img src="assets/images/gubler-orchids-site/gubler-orchids-site-thumbnail-320x160.jpg" class="shadow" width="320" heigh="160" alt=""></noscript>
+			</a>
+		</li>
+		<li class="project">
+			<a href="portfolio/epson-iprint.html">
+				<img class="lazy shadow" data-original="assets/images/epson-iprint/epson-iprint-thumbnail-320x160.jpg" src="assets/images/spacer.gif" width="320" heigh="160">
+				<noscript><img src="assets/images/epson-iprint/epson-iprint-thumbnail-320x160.jpg" class="shadow" width="320" heigh="160" alt=""></noscript>
+			</a>
+		</li>
+		<li class="project">
+			<a href="portfolio/ezexchanges.html">
+				<img class="lazy shadow" data-original="assets/images/ezexchanges/ezexchanges-thumbnail-320x160.jpg" src="assets/images/spacer.gif" width="320" heigh="160">
+				<noscript><img src="assets/images/ezexchanges/ezexchanges-thumbnail-320x160.jpg" class="shadow" width="320" heigh="160" alt=""></noscript>
+			</a>
+		</li>
+		<li class="project large">
+			<a href="portfolio/pure-bliss-eats.html">
+				<img class="lazy shadow" data-original="assets/images/pure-bliss-eats/pure-bliss-eats-thumbnail-650x325.jpg" src="assets/images/spacer.gif" width="650" heigh="325">
+				<noscript><img src="assets/images/pure-bliss-eats/pure-bliss-eats-thumbnail-650x325.jpg" class="shadow" width="650" heigh="325" alt=""></noscript>
+			</a>
+		</li>
+		<li class="project skip">
+			<a href="portfolio/bronco-fusion-2012.html">
+				<img class="lazy shadow" data-original="assets/images/bronco-fusion/bronco-fusion-thumbnail-320x160.jpg" src="assets/images/spacer.gif" width="320" heigh="160">
+				<noscript><img src="assets/images/bronco-fusion/bronco-fusion-thumbnail-320x160.jpg" class="shadow" width="320" heigh="160" alt=""></noscript>
+			</a>
+		</li>
+		<li class="project">
+			<a href="portfolio/uhs-posters.html">
+				<img class="lazy shadow" data-original="assets/images/uhs/uhs-thumbnail-320x160.jpg" src="assets/images/spacer.gif" width="320" heigh="160">
+				<noscript><img src="assets/images/uhs/uhs-thumbnail-320x160.jpg" class="shadow" width="320" heigh="160" alt=""></noscript>
+			</a>
+		</li>
+		<li class="project large">
+			<a href="portfolio/gubler-orchids-packaging.html">
+				<img class="lazy shadow" data-original="assets/images/gubler-orchids-packaging/gubler-orchids-packaging-thumbnail-650x325.jpg" src="assets/images/spacer.gif" width="650" heigh="325">
+				<noscript><img src="assets/images/gubler-orchids-packaging/gubler-orchids-packaging-thumbnail-650x325.jpg" class="shadow" width="650" heigh="325" alt=""></noscript>
+			</a>
+		</li>
+		<li class="project">
+			<a href="portfolio/twop.html">
+				<img class="lazy shadow" data-original="assets/images/television-without-pity/television-without-pity-thumbnail-320x160.jpg" src="assets/images/spacer.gif" width="320" heigh="160">
+				<noscript><img src="assets/images/television-without-pity/television-without-pity-thumbnail-320x160.jpg" class="shadow" width="320" heigh="160" alt=""></noscript>
+			</a>
+		</li>
+		<li class="project">
+			<a href="portfolio/san-francisco-locavores.html">
+				<img class="lazy shadow" data-original="assets/images/locavores/locavores-thumbnail-320x160.jpg" src="assets/images/spacer.gif" width="320" heigh="160">
+				<noscript><img src="assets/images/locavores/locavores-thumbnail-320x160.jpg" class="shadow" width="320" heigh="160" alt=""></noscript>
+			</a>
+		</li>
+		<li class="project">
+			<a href="portfolio/epson-emails.html">
+				<img class="lazy shadow" data-original="assets/images/epson-emails/epson-emails-thumbnail-320x160.jpg" src="assets/images/spacer.gif" width="320" heigh="160">
+				<noscript><img src="assets/images/epson-emails/epson-emails-thumbnail-320x160.jpg" class="shadow" width="320" heigh="160" alt=""></noscript>
+			</a>
+		</li>
+	</ul>
+
+	</div>
+
+  </section>
+	<div class="clear"></div>
+</div><!-- End Main -->
+<footer id="footer">
+	<div class="row"><a href="http://www.linkedin.com/pub/andrew-hipp/32/457/254/" target="_blank">&copy; Andrew Hipp 2014</a></div>
+</footer>
+</div>
+
+  <script src='assets/js/google-analytics.js'></script>
+<script src='assets/js/plugins.js'></script>
+<script src='assets/js/script.js'></script>
+
+</body>
+
+</html>
