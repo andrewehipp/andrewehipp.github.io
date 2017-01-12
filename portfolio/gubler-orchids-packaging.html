@@ -7,30 +7,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   
-  
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-      
-  
   <script src='../assets/js/jquery-1.9.1.min.js'></script>
 <script src='../assets/js/modernizr.min.js'></script>
 
@@ -40,12 +16,12 @@
   <!--[if (lt IE 9) & (!IEMobile)]>
     <link rel='stylesheet' href='../assets/css/ie.css'>
   <![endif]-->
-    
+
   <link href="../assets/images/favicon.ico" rel="shortcut icon">
   <link href="../assets/images/apple-touch-icon.png" rel="apple-touch-icon">
-  
+
   <title>Andrew Hipp - Gubler Orchids - Illustrator &amp; Photoshop - Redlands, CA</title>
-  
+
 </head>
 
 <body>
@@ -57,12 +33,12 @@
   <div id="wrapper" >
   <header id="header">
     <section class="row">
-      
+
       <div class="title">
 
 
         <h1><a href="/" class="ir">Andrew Hipp</a></h1>
-        
+
         <h2><a href="http://www.linkedin.com/pub/andrew-hipp/32/457/254/" target="_blank"><i class="icon linkedin">Linkedin</i> Andrew Hipp</a></h2>
 
         <ul class="contact">
@@ -71,9 +47,9 @@
         </ul>
 
       </div>
-      
+
       <!-- include _nav -->
-    
+
     </section>
   </header>
   <div id="main">
@@ -124,7 +100,7 @@
 	<div class="clear"></div>
 </div><!-- End Main -->
 <footer id="footer">
-	<div class="row"><a href="http://www.linkedin.com/pub/andrew-hipp/32/457/254/" target="_blank">&copy; Andrew Hipp 2014</a></div>
+	<div class="row"><a href="http://www.linkedin.com/pub/andrew-hipp/32/457/254/" target="_blank">&copy; Andrew Hipp 2017</a></div>
 </footer>
 </div>
 
