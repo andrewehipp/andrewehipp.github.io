@@ -45,7 +45,12 @@
 }
 
 .c-header__content {
-    padding: 3vmin 0;
+    padding: spacer(0.5) 0;
+
+    @include media('sm') {
+        padding: 3vmin 0;
+    }
+
 }
 
 

@@ -783,7 +783,7 @@ figcaption {
     top: 0;
     left: -2.5%;
     bottom: 0;
-    z-index: -1;
+    z-index: 2;
     transform: rotate(2deg);
     transform-origin: left top; }
 
@@ -793,7 +793,7 @@ figcaption {
   width: 106%;
   top: 0;
   right: -2.5%;
-  z-index: -1;
+  z-index: 1;
   transform: rotate(-2deg);
   transform-origin: right top; }
 
