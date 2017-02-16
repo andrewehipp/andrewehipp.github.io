@@ -61,13 +61,7 @@
 
                                     {% if section.browser.type != "video" %}
 
-                                        {% assign width = assets[section.browser.source].width | plus: 0.0 %}
-                                        {% assign height = assets[section.browser.source].height | plus: 0.0 %}
-                                        {% assign fraction = height | divided_by: width %}
-
-                                        <div class="o-aspect u-spacing-flush" style="padding-top: {{ fraction | times: 100 }}%">
-                                            <img src="/assets/img/portfolio/{{ section.browser.source }}" alt="" class="c-browser__img u-img-full">
-                                        </div>
+                                        <img src="/assets/img/portfolio/{{ section.browser.source }}" alt="" class="c-browser__img u-img-full">
 
                                     {% else %}
 
