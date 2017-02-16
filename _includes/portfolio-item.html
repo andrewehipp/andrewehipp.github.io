@@ -1,0 +1,33 @@
+{% for project in site.portfolio %}
+
+    {% if project.slug == include.slug %}
+
+        {% if include.large %}
+            {% assign size = "1000x563" %}
+        {% else %}
+            {% assign size = "360x203" %}
+        {% endif %}
+
+        {% capture src %}/assets/img/portfolio/{{ project.slug }}-thumbnail-{{ size }}.jpg{% endcapture %}
+
+        <li class="o-portfolio__item {% if include.large %}o-portfolio__item--large{% endif %} {% if include.gap %}o-portfolio__item--gap{% endif %} {% if include.bottom %}o-portfolio__item--bottom{% endif %}">
+            <a href="/portfolio/{{ project.slug }}/">
+                <article id="{{ project.slug }}" class="c-card u-animate">
+                    <div class="o-aspect o-aspect--16x9 u-spacing-flush">
+
+                        {% if include.delay %}
+                            <img data-src="{{ src | relative_url }}" alt="{{ project.title }}" class="c-card__img u-img-full js-load-image" data-target="#{{ project.slug }}"/>
+                        {% else %}
+                            <img src="{{ src | relative_url }}" alt="{{ project.title }}" class="c-card__img u-img-full js-load-image" data-target="#{{ project.slug }}"/>
+                        {% endif %}
+                    </div>
+                    <header class="c-card__header">
+                        <h3 class="c-card__title">{{ project.title }}</h3>
+                        <h5 class="c-card__client">{{ project.client }}</h5>
+                    </header>
+                </article>
+            </a>
+        </li>
+    {% endif %}
+
+{% endfor %}
