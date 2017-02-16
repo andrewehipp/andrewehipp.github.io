@@ -14,7 +14,6 @@
     will-change: transform;
     transition: 2s;
 
-    .touch &,
     .c-card:hover & {
         transform: scale(1.025);
     }
@@ -22,14 +21,17 @@
 }
 
 .c-card__header {
-    opacity: 0;
     padding: spacer(0.5);
     width: 100%;
     position: absolute;
     bottom: -1px;
     left: 0;
-    transition: timer('normal');
     z-index: 1;
+
+    @include media('sm') {
+        opacity: 0;
+        transition: timer('normal');
+    }
 
     &::before {
         content: '';
@@ -43,44 +45,53 @@
         z-index: -1;
     }
 
-    .touch &,
     .c-card:hover & {
-        opacity: 1;
+        @include media('sm') {
+            opacity: 1;
+        }
     }
 
 }
 
 .c-card__title {
-    opacity: 0;
     margin-bottom: em(3px, 18px);
     color: #fff;
     font-size: rem(19px);
     line-height: em(21px, 18px);
-    transform: translateY(30px);
-    transition: timer('fast');
 
-    .touch &,
+    @include media('sm') {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: timer('fast');
+    }
+
     .c-card:hover & {
-        opacity: 1;
-        transform: none;
+        @include media('sm') {
+            opacity: 1;
+            transform: none;
+        }
     }
 
 }
 
 .c-card__client {
-    opacity: 0;
     margin: 0;
     color: lighten(color('grey'), 10%);
     font-size: rem(13px);
     font-weight: normal;
-    transform: translateY(30px);
-    transition: timer('fast');
 
-    .touch &,
+    @include media('sm') {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: timer('fast');
+    }
+
     .c-card:hover & {
-        opacity: 1;
-        transform: none;
-        transition: timer('fast') timer('fast');
+        @include media('sm') {
+            opacity: 1;
+            transform: none;
+            transition: timer('fast') timer('fast');
+        }
     }
 
 }
