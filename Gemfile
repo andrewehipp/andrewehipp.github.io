@@ -21,6 +21,4 @@ gem "minima", "~> 2.0"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
     gem "jekyll-feed", "~> 0.6"
-    gem "jekyll-assets", "2.2.8"
-    gem "mini_magick", "4.6.0"
 end
