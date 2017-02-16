@@ -101,10 +101,10 @@ figcaption {
 \*------------------------------------*/
 .o-on-top {
   position: relative;
-  z-index: 1; }
+  z-index: 10; }
 
 .o-on-top--2 {
-  z-index: 2; }
+  z-index: 20; }
 
 /*------------------------------------*    #PAGE
 \*------------------------------------*/
@@ -730,7 +730,10 @@ figcaption {
   transform: rotate(-2deg); }
 
 .c-header__content {
-  padding: 3vmin 0; }
+  padding: 10px 0; }
+  @media (min-width: 768px) {
+    .c-header__content {
+      padding: 3vmin 0; } }
 
 .c-header__title {
   color: #333; }
