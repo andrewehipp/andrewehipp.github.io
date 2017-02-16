@@ -21,7 +21,7 @@ url: https://andrewehipp.com # the base hostname & protocol for your site, e.g. 
 enforce_ssl: www.andrewehipp.com  # without any protocol
 twitter_username: andrewehipp
 github_username: andrewehipp
-
+fb_app_id: 196727450808290
 
 # Build settings
 markdown: kramdown
