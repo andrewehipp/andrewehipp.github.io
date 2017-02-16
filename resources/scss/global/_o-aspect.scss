@@ -4,7 +4,10 @@
 
 // Config to easily generate modifiers for different image aspect ratios
 $aspect-config: (
-    '16x9': percentage(9 / 16)
+    '16x9': percentage(9 / 16),
+    '1440x900': percentage(900 / 1440),
+    'iphone6': percentage(667 / 375),
+    'ipad': percentage(1024 / 768),
 );
 
 
@@ -24,9 +27,10 @@ $aspect-config: (
     position: relative;
 
     & > * {
+        display: block;
         margin: 0;
         width: 100%;
-        height: auto;
+        height: 100%;
         position: absolute;
         top:  0;
         left: 0;

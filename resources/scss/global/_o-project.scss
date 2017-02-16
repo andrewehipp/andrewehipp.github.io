@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    #PROJECT
+\*------------------------------------*/
+
+.o-project {
+    margin-bottom: spacer(1);
+
+    @include media('sm') {
+        display: flex;
+        margin-bottom: spacer(3);
+    }
+
+}
+
+
+
+
+.o-project__content {
+    position: relative;
+
+    @include media('sm') {
+        flex: 0 0 auto;
+        width: 66.66667%;
+        margin-left: auto;
+        padding: 0 5px;
+    }
+
+}
+
+.o-project__content--bottom {
+    align-self: flex-end;
+}
+
+
+
+.o-project__aside {
+    @include media('sm') {
+        flex: 0 0 auto;
+        width: 33.33333%;
+        position: relative;
+    }
+}
+
+.o-project__aside--center {
+    align-self: center;
+}
+
+.o-project__aside--bottom {
+    align-self: flex-end;
+}
+
+
+.o-project__sticky {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    @include media('sm') {
+        padding-top: 5vh;
+    }
+
+}

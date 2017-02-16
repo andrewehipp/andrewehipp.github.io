@@ -66,17 +66,17 @@ function sass() {
         }))
 
         // Inline images as base64 into the css
-        .pipe($.inlineBase64({
-            baseDir: PATH.scss,
-            // 12kb max size
-            maxSize: 1024 * 12,
-            // Debug output in the console
-            debug: false,
-        }))
+        // .pipe($.inlineBase64({
+        //     baseDir: PATH.scss,
+        //     // 12kb max size
+        //     maxSize: 1024 * 12,
+        //     // Debug output in the console
+        //     debug: false,
+        // }))
 
         // Autoprefixer process
         .pipe($.autoprefixer({
-            browsers: ['last 2 versions', 'ie <= 8'],
+            browsers: ['last 2 versions'],
         }))
 
         // End sourcemaps, write to CSS path and update br
@@ -206,6 +206,7 @@ const scripts = gulp.parallel(jsLint, gulp.series('bundle', js));
 const build = gulp.parallel(styles, scripts);
 
 gulp.task('build', build);
+
 
 
 

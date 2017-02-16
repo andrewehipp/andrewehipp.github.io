@@ -13,7 +13,8 @@
 @include headings() {
     margin: 0 0 spacer(1);
     font-size: 1.2rem;
-    line-height: $base-line-height;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 
@@ -48,7 +49,7 @@ dl {
  * Link Styles
  */
 a {
-    color: color('link');
+    color: color('green');
     text-decoration: none;
 
     @include link-states() {

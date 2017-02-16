@@ -3,66 +3,60 @@
 <main id="main" role="main">
     <div class="o-container">
 
-        {{ content }}
+        <section class="o-on-top u-spacing-far u-pull-into-footer">
+            <div class="o-project">
+                <div class="o-project__aside">
+                    <div class="o-project__sticky">
+                        <div class="o-right-gutter">
 
-        <ul class="o-list-unstyled o-portfolio">
-            <li class="o-portfolio__item o-portfolio__item--large">
-                <a href="" class="">
-                    <article class="c-card">
-                        <img src="http://www.placehold.it/650x325" alt="" class="c-card__img">
-                        <header></header>
-                    </article>
-                </a>
-            </li>
-            <li class="o-portfolio__item">
-                <a href="" class="">
-                    <article class="c-card">
-                        <img src="http://www.placehold.it/320x160" alt="" class="c-card__img">
-                        <header></header>
-                    </article>
-                </a>
-            </li>
-            <li class="o-portfolio__item">
-                <a href="" class="">
-                    <article class="c-card">
-                        <img src="http://www.placehold.it/320x160" alt="" class="c-card__img">
-                        <header></header>
-                    </article>
-                </a>
-            </li>
-            <li class="o-portfolio__item">
-                <a href="" class="">
-                    <article class="c-card">
-                        <img src="http://www.placehold.it/320x160" alt="" class="c-card__img">
-                        <header></header>
-                    </article>
-                </a>
-            </li>
-            <li class="o-portfolio__item">
-                <a href="" class="">
-                    <article class="c-card">
-                        <img src="http://www.placehold.it/320x160" alt="" class="c-card__img">
-                        <header></header>
-                    </article>
-                </a>
-            </li>
-            <li class="o-portfolio__item">
-                <a href="" class="">
-                    <article class="c-card">
-                        <img src="http://www.placehold.it/320x160" alt="" class="c-card__img">
-                        <header></header>
-                    </article>
-                </a>
-            </li>
-            <li class="o-portfolio__item o-portfolio__item--large">
-                <a href="" class="">
-                    <article class="c-card">
-                        <img src="http://www.placehold.it/650x325" alt="" class="c-card__img">
-                        <header></header>
-                    </article>
-                </a>
-            </li>
-        </ul>
+                            <h1 class="c-heading-title">Director of Front End Development at Haven Agency in Ontario, Calif.</h1>
+
+                            <div class="u-spacing-far u-color-grey">
+                                <p>Eight years as a Front End Developer building highly optimized, responsive, localized websites.</p>
+                                <p>Currently building sites with <strong>scss</strong>, <strong>ITCSS</strong>, <strong>es6</strong>, <strong>babel</strong>, <strong>webpack</strong>, and <strong>React.js/Preact.js</strong>.</p>
+                                <p>Previously six years as a Web Designer with a B.F.A in Graphic Design.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="o-project__content">
+
+                    <ul class="o-list-unstyled o-portfolio u-pull-into-header">
+
+                        {% include portfolio-item.html slug="wcc-underground" bottom="true" %}
+
+                        {% include portfolio-item.html slug="hotd" large="true" %}
+
+                        {% include portfolio-item.html slug="slotix" %}
+
+                        {% include portfolio-item.html slug="wardragons" %}
+
+                        {% include portfolio-item.html slug="shadow-and-fortune" %}
+
+                        {% include portfolio-item.html slug="ulol" large="true" %}
+
+                        {% include portfolio-item.html slug="imperial" %}
+
+                        {% include portfolio-item.html slug="bhsb" %}
+
+                        {% include portfolio-item.html slug="starcraft2-co-op-missions" large="true" delay="true" %}
+
+                        {% include portfolio-item.html slug="year-in-review" delay="true" %}
+
+                        {% include portfolio-item.html slug="riunite" delay="true" %}
+
+                        {% include portfolio-item.html slug="mount-targon" delay="true" %}
+
+                        {% include portfolio-item.html slug="bilgewater" large="true" delay="true" %}
+
+                    </ul>
+
+                </div>
+            </div>
+
+        </section>
 
     </div>
 </main>

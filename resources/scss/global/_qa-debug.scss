@@ -23,7 +23,7 @@ $message: 'WARNING: ';
 %debug-shared-styles {
     outline: 1px solid #f00;
 
-    &:after {
+    &::after {
         display: none;
         width: 100%;
         padding: 5px 10px;
@@ -42,7 +42,7 @@ $message: 'WARNING: ';
     &:hover {
         outline: 2px solid #f00;
 
-        &:after {
+        &::after {
             display: block;
         }
 
@@ -77,7 +77,7 @@ $message: 'WARNING: ';
             // Share the cosmetic styles rather than repeat them per selector.
             @extend %debug-shared-styles;
 
-            &:after {
+            &::after {
                 @if ($replacement != null) {
                     /**
                      * If we have a replacement selector, tell people what it is.
@@ -115,7 +115,7 @@ $message: 'WARNING: ';
     [class*="--"]:not([class*=" "]) {
         @extend %debug-shared-styles;
 
-        &:after {
+        &::after {
             content: $message + 'Can not have a Modifier (i.e. `.' attr(class) '`) without a Block.';
         }
 
@@ -137,7 +137,7 @@ $message: 'WARNING: ';
     [href=""] {
         @extend %debug-shared-styles;
 
-        &:after {
+        &::after {
             content: $message + 'No value for the `href` attribute provided. Consider using a <button> if this is for Javascript.';
         }
 

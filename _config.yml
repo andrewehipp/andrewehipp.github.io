@@ -13,24 +13,47 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@domain.com
+title: Andrew Hipp - Front End Developer - Redlands, Calif
+email: andrewehipp@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+    Write an awesome description for your new site here. You can edit this
+    line in _config.yml. It will appear in your document head meta (for
+    Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: http://andrewehipp.com # the base hostname & protocol for your site, e.g. http://example.com
+enforce_ssl: www.andrewehipp.com  # without any protocol
+twitter_username: andrewehipp
+github_username:  andrewehipp
+
 
 # Build settings
 markdown: kramdown
 theme: minima
+assets:
+  assets:
+    - production.min.css
+  sources:
+    - assets/css
+    - assets/fonts
+    - assets/img/portfolio
+    - assets/img/site
+    - assets/js
 gems:
-  - jekyll-feed
+    - jekyll-feed
+    - jekyll-assets
+    - mini_magick
 exclude:
-  - Gemfile
-  - Gemfile.lock
+    - README.md
+    - package.json
+    - node_modules
+    - gulpfile.js
+    - resources
+    - Gemfile
+    - Gemfile.lock
 collections:
-- portfolio
+    portfolio:
+        layout: portfolio
+        output: true
+        permalink: /portfolio/:title/
+
+#Site Info

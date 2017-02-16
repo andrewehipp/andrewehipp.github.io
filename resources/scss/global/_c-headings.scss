@@ -4,6 +4,7 @@
 
 .c-heading-page {
     font-size: rem(22px);
+    line-height: em(39px, 36px);
 
     @include media('sm') {
         font-size: rem(36px);
@@ -24,7 +25,7 @@
     font-size: rem(18px);
 
     @include media('sm') {
-        font-size: rem(24px);
+        font-size: rem(26px);
     }
 
 }

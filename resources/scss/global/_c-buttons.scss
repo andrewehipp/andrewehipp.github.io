@@ -5,19 +5,18 @@
 .c-btn {
     display: inline-block;
     cursor: pointer;
-    padding: em(10px) em(20px);
-    border: 0;
+    padding: em(8px, 20px) em(15px, 20px);
+    border: 1px solid transparent;
+    border-radius: 3px;
     color: color('link');
     background: #eee;
-    font-size: $base-font-size;
+    font-size: 0.825rem;
     line-height: 1;
-    font-weight: bold;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: timer('fast');
 
-    @include link-states() {
-        background: darken(#eee, 10%);
+    &:hover {
         text-decoration: none;
     }
 
@@ -27,12 +26,34 @@
 /**
  * Modifiers for the buttons
  */
-.c-btn--primary {
-    background: color('primary');
+.c-btn--green {
+    background: color('green');
     color: #fff;
 
-    @include link-states() {
-        background: darken(color('primary'), 10%);
+    &:hover {
+        text-decoration: none;
+        background: lighten(color('green'), 5%);
+    }
+
+}
+
+.c-btn--white {
+    background: #fff;
+    color: color('green');
+
+    &:hover {
+        text-decoration: none;
+    }
+
+}
+
+.c-btn--white-outlined {
+    border-color: currentColor;
+    color: darken(#fff, 20%);
+    background: transparent;
+
+    &:hover {
+        color: #fff;
     }
 
 }

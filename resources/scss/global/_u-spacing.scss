@@ -35,3 +35,24 @@ $spacing-config: (
     }
 
 }
+
+
+
+
+.u-pull-into-header {
+    @include media('lg') {
+        margin-top: -137px;
+    }
+}
+
+.u-push-out-of-header {
+    @include media('lg') {
+        margin-top: 137px;
+    }
+}
+
+.u-pull-into-footer {
+    @include media('lg') {
+        margin-bottom: -117px;
+    }
+}

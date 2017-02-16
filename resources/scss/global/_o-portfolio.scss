@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    #PORTFOLIO
+\*------------------------------------*/
+
+/**
+ * Portfolio grid layout using flexbox. Includes large and small thumbs.
+ */
+.o-portfolio {
+    margin: 0 -5px -10px;
+
+    @include media('xs') {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+.o-portfolio__item {
+    min-height: 1px;
+    padding: 0 5px 10px;
+
+    @include media('xs') {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    @include media('sm') {
+        width: 33.33333%;
+    }
+
+}
+
+.o-portfolio__item--gap {
+    @include media('sm') {
+        margin-left: 33.33333%;
+    }
+}
+
+.o-portfolio__item--large {
+    @include media('sm') {
+        width: 66.66667%;
+    }
+}
+
+.o-portfolio__item--important {
+    @include media('less-than-md') {
+        width: 100%;
+    }
+}
+
+
+
+.o-portfolio__item--bottom {
+    @include media('sm') {
+        align-self: flex-end;
+    }
+}
+
+.o-portfolio__item--center {
+    @include media('sm') {
+        align-self: center;
+    }
+}

@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    #ANIMATE UTILITIES
+\*------------------------------------*/
+
+
+.u-animate {
+    opacity: 0;
+    will-change: opacity, transform;
+    transition: timer('normal') ease-out;
+    transform: translateY(50px);
+
+    &.is-animating {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+.u-animate-fade {
+    opacity: 0;
+    will-change: opacity;
+    transition: timer('normal') ease-out;
+
+    &.is-animating {
+        opacity: 1;
+    }
+
+}

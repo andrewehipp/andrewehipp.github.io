@@ -7,5 +7,6 @@
  * Usefull for preventing scrolling on the body.
  */
 .o-wrap {
+    position: relative;
     overflow: hidden;
 }

@@ -3,10 +3,10 @@
 \*------------------------------------*/
 
 /// Container Width
-$container-width:       1240px;
+$container-width:       1100px;
 
 /// Container left and right padding
-$container-padding:       20px;
+$container-padding:       10px;
 
 
 
@@ -23,7 +23,7 @@ $container-padding:       20px;
     max-width: $container-padding + $container-width + $container-padding;
 
     @include media('sm') {
-        width: 90%;
+        width: 85%;
     }
 
 }

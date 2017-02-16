@@ -1,0 +1,157 @@
+{% include header.html %}
+
+
+
+<main id="main" role="main">
+    <div class="o-container">
+
+        {% assign sections = page.sections %}
+
+        {% if sections %}
+
+            <section class="o-on-top u-spacing-far u-pull-into-header u-pull-into-footer">
+
+                {% for section in sections %}
+
+                    {% comment %}
+                        Add the project header to the first block. Also push it out of the header
+                    {% endcomment %}
+
+                    <div class="o-project">
+                        <div class="o-project__aside {% if forloop.index == 1 %}u-push-out-of-header{% endif %}">
+                            <div class="o-project__sticky o-right-gutter">
+
+                                {% if forloop.index == 1 %}
+
+                                    <header class="u-spacing-normal">
+                                        <h1 class="c-heading-page u-spacing-close">{{ page.title }}</h1>
+                                        <h3 class="c-heading-subtitle u-color-grey">{{ page.client }}</h3>
+
+                                        <ul class="o-list-inline">
+                                            {% for category in page.categories %}
+                                                <li>
+                                                    <span class="c-cat">{{ category }}</span>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+
+                                    </header>
+
+                                {% endif %}
+
+                                <div class="c-description u-color-grey">
+                                    {% for line in section.description %}
+                                        <p>{{ line }}</p>
+                                    {% endfor %}
+                                </div>
+
+                                {% if forloop.index == 1 %}
+                                    {% if page.link %}
+                                        <p><a href="{{ page.link }}" target="_blank" class="c-btn c-btn--green">View Live Site</a></p>
+                                    {% endif %}
+                                {% endif %}
+
+                            </div>
+                        </div>
+                        <div class="o-project__content">
+
+                            {% if section.browser %}
+                                <div id="browser-{{ forloop.index }}" class="c-browser">
+                                    <span class="c-browser__title">{{ page.title }}</span>
+
+                                    {% if section.browser.type != "video" %}
+
+                                        {% assign width = assets[section.browser.source].width | plus: 0.0 %}
+                                        {% assign height = assets[section.browser.source].height | plus: 0.0 %}
+                                        {% assign fraction = height | divided_by: width %}
+
+                                        <div class="o-aspect u-spacing-flush" style="padding-top: {{ fraction | times: 100 }}%">
+                                            <img src="/assets/img/portfolio/{{ section.browser.source }}" alt="" class="c-browser__img u-img-full">
+                                        </div>
+
+                                    {% else %}
+
+                                        <div class="o-aspect o-aspect--1440x900 u-spacing-flush">
+                                            <video src="/assets/img/portfolio/{{ section.browser.source }}" loop></video>
+                                        </div>
+
+                                    {% endif %}
+
+                                </div>
+                            {% endif %}
+
+                            {% if section.mobile %}
+                                <div id="mobile-{{ forloop.index }}" class="c-mobile {% if section.browser %}c-mobile--overlap{% endif %}">
+                                    <div class="c-mobile__inner">
+                                        <div class="o-aspect o-aspect--iphone6 u-spacing-flush">
+
+                                        {% if section.mobile.type != "video" %}
+                                            <img src="/assets/img/portfolio/{{ section.mobile.source }}" alt="" class="c-mobile__img u-img-full">
+                                        {% else %}
+                                            <video src="/assets/img/portfolio/{{ section.mobile.source }}" loop></video>
+                                        {% endif %}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+            </section>
+
+        {% else %}
+            <div class="o-project">
+                <div class="o-project__content">
+                    <h1 class="c-heading-page">Whoops!</h1>
+                    <p>This page's <a href="http://jekyllrb.com/docs/frontmatter/" target="_blank">Front Matter</a> has no `sections` content.</p>
+                </div>
+            </div>
+        {% endif %}
+
+    </div>
+</main>
+
+
+<nav class="c-paging">
+    <ul class="o-list-unstyled c-paging__list">
+        <li class="c-paging__list-item">
+
+            {% if page.previous.url %}
+                {% assign previousLink = page.previous.url %}
+            {% else %}
+                {% assign previousLink = site.portfolio.last.url %}
+            {% endif %}
+
+            <a href="{{ previousLink }}" class="c-paging-arrow c-paging-arrow--prev">
+                <svg class="c-paging-arrow__svg" width="40" height="40" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M378 896c0-17.3 6.3-32.3 19-45l742-742c12.7-12.7 27.7-19 45-19s32.3 6.3 45 19l166 166c12.7 12.7 19 27.7 19 45s-6.3 32.3-19 45L864 896l531 531c12.7 12.7 19 27.7 19 45s-6.3 32.3-19 45l-166 166c-12.7 12.7-27.7 19-45 19s-32.3-6.3-45-19L397 941c-12.7-12.7-19-27.7-19-45z"/>
+                </svg>
+                <span class="u-sr-only">{{ page.previous.title }}</span>
+            </a>
+
+        </li>
+        <li class="c-paging__list-item">
+
+            {% if page.next.url %}
+                {% assign nextLink = page.next.url%}
+            {% else %}
+                {% assign nextLink = site.portfolio.first.url %}
+            {% endif %}
+
+            <a href="{{ nextLink }}" class="c-paging-arrow c-paging-arrow--next">
+                <svg class="c-paging-arrow__svg" width="40" height="40" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1395 941l-742 742c-12.7 12.7-27.7 19-45 19s-32.3-6.3-45-19l-166-166c-12.7-12.7-19-27.7-19-45s6.3-32.3 19-45l531-531-531-531c-12.7-12.7-19-27.7-19-45s6.3-32.3 19-45l166-166c12.7-12.7 27.7-19 45-19s32.3 6.3 45 19l742 742c12.7 12.7 19 27.7 19 45s-6.3 32.3-19 45z"/>
+                </svg>
+                <span class="u-sr-only">{{ page.next.title }}</span>
+            </a>
+
+        </li>
+    </ul>
+</nav>
+
+
+{% include footer.html %}

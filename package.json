@@ -41,6 +41,8 @@
   "dependencies": {
     "gulp": "gulpjs/gulp.git#4.0",
     "gulp-load-plugins": "^1.1.0",
-    "jquery": "^1.11.3"
+    "jquery": "^1.11.3",
+    "scrollmonitor": "^1.2.3",
+    "webfontloader": "^1.6.27"
   }
 }

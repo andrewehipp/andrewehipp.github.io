@@ -6,11 +6,15 @@
  * Body
  */
 html {
-    background: #fff;
-    color: $base-color;
+    background: color('black');
+    color: color('black');
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: #fff;
 }

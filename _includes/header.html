@@ -1,38 +1,101 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js ie lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Andrew Hipp - Front End Developer - Redlands, CA</title>
+    <title>{{ site.title }}</title>
 
-  <link href="assets/images/site/favicon.ico" rel="shortcut icon">
-  <link href="assets/images/site/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- http://ogp.me/ -->
+    <meta property="og:title" content="{{ site.title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:image" content="{{ "/assets/img/site/share/share-icon-1024x1024.jpg" | relative_url }}" />
 
-  <link rel="stylesheet" href="assets/css/normalize.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ "/assets/img/site/share/apple-icon-57x57.png" | relative_url }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ "/assets/img/site/share/apple-icon-60x60.png" | relative_url }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ "/assets/img/site/share/apple-icon-72x72.png" | relative_url }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ "/assets/img/site/share/apple-icon-76x76.png" | relative_url }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ "/assets/img/site/share/apple-icon-114x114.png" | relative_url }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ "/assets/img/site/share/apple-icon-120x120.png" | relative_url }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ "/assets/img/site/share/apple-icon-144x144.png" | relative_url }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ "/assets/img/site/share/apple-icon-152x152.png" | relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/img/site/share/apple-icon-180x180.png" | relative_url }}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ "/assets/img/site/share/android-icon-192x192.png" | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/img/site/share/favicon-32x32.png" | relative_url }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ "/assets/img/site/share/favicon-96x96.png" | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/img/site/share/favicon-16x16.png" | relative_url }}">
+    <link rel="manifest" href="{{ "/assets/img/site/share/manifest.json" | relative_url }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ "/assets/img/site/share/ms-icon-144x144.png" | relative_url }}">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="canonical" href=" { { site.url } }{ { page.url } }" />
+
+    <!-- <script type="text/javascript">
+        var host = "andrewehipp.github.io";
+        if ((host == window.location.host) && (window.location.protocol != "https:"))
+            window.location.protocol = "https";
+    </script> -->
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet"> -->
+<!--
+    <link rel="preload" href="{{ '/assets/fonts/poppins-regular-webfont.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/assets/fonts/poppins-medium-webfont.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin> -->
+
+    <link href="{{ '/assets/css/production.min.css' | relative_url }}" rel="stylesheet">
 
 </head>
 
 <body>
-  <header class="c-header">
-    <div class="o-container">
 
-      <div class="c-title">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        <h1><a href="/" class="u-sr-only">Andrew Hipp</a></h1>
+        ga('create', 'UA-29489442-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
-        <h2><a href="http://www.linkedin.com/pub/andrew-hipp/32/457/254/" target="_blank"><i class="icon linkedin">Linkedin</i> Andrew Hipp</a></h2>
+    <div class="o-page">
+        <header class="o-page__header c-header c-line-board">
 
-        <ul class="contact">
-          <li><span title="Cell Phone">(530) 903-0280</span></li>
-          <li><a href="mailto:andrewehipp@gmail.com?subject=Portfolio Lead" target="_blank">andrewehipp@gmail.com</a></li>
-        </ul>
+            <canvas class="c-line-board__canvas c-header__canvas js-header-canvas"></canvas>
 
-      </div>
+            <div class="o-container">
 
-    </div>
-  </header>
+                <div class="c-header__content">
+
+                    <div class="o-on-top o-on-top--2">
+
+                        <div class="c-header__lockup">
+                            <div class="c-header__lockup-block">
+                                <a href="/">
+                                    <svg class="c-header__logo" width="69" height="109" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.8 102.8">
+                                      <path fill="#fff" d="M50.8 58.7c2.1 1.1 5.1 1.1 6.9 0 1.4-.9 2.2-2.5 3.2-4 1.6-2.5 3.5-5.8 3.9-9.3v-1.8c-.5-2.5-1.7-4.3-2.7-6.3-.9-1.6-1.7-3.1-2.6-4.5-1.5-2.3-3.4-5.1-5.5-6.8-.4-.3-.9-.5-1-.8-.1-.2-.1-.6-.2-1-.1-.8-.3-1.4-.4-2.1-.1-.4-.2-1-.2-1.1 0-.3.4-.5.7-.9 1.2-1.4 2-3.8 1.5-6.3-.1-.4-.5-1.2-.5-1.5 0-.4.6-1.1.8-1.5.8-1.5 1.6-3.5 1.4-5.7C55.9 2 53.6.4 50.8-.1h-1.5C46.6.4 45 2 44.2 4.4 41 3.2 36.9 2.3 32.5 2.3h-.4c-4.3 0-8.4.9-11.5 2.1C19.8 2 18.2.5 15.5-.1H14c-2.7.6-5 2.2-5.2 5.3-.2 2.1.6 4.1 1.4 5.7.2.5.8 1.1.8 1.5 0 .3-.4 1.1-.5 1.5-.6 2.5.3 4.9 1.5 6.3.3.3.6.6.7.9 0 .1-.1.7-.2 1.1-.1.7-.3 1.3-.4 2.1-.1.4-.1.8-.2 1-.1.3-.6.5-1 .8-2.1 1.7-4 4.5-5.5 6.8-.9 1.3-1.7 2.9-2.6 4.5-1.1 2-2.2 3.8-2.7 6.3v1.8C.6 49 2.4 52.2 4 54.8c1 1.5 1.8 3.1 3.2 4 1.8 1.1 4.8 1.1 6.8 0 1.1 3.2 3.1 7.8 2.8 12.1 0 .3-.1.9-.2 1.1-.3 1-1 2-1.6 3-.6 1.1-1.1 2.1-1.7 3.1-1.3-2.4-2-5.4-4.8-6.2-.8-.2-1.5-.2-2.1 0C3.5 73 3.1 79 4.6 82c-1 1.3-2 2.4-1.8 4.7.1.7.3 1.5.5 2.2 2.5 10.8 14.3 13.4 26.7 13.9h4.8c12.4-.6 24.2-3.2 26.7-13.9.2-.7.4-1.5.5-2.2.2-2.3-.9-3.4-1.8-4.7 1.5-3 1.2-9-1.9-10.1-.6-.2-1.3-.2-2.1 0-2.8.8-3.5 3.8-4.8 6.2-.6-1-1.1-2.1-1.7-3.1-.5-1-1.3-2-1.6-3.1-.1-.2-.2-.7-.2-1.1-.3-4.2 1.8-8.8 2.9-12.1z"/>
+                                      <path fill="#333935" d="M24 26.3c-.1-2.6-5-2.1-4.9.3 1.2 1.1 4.1.9 4.9-.3z"/>
+                                      <path fill="#333935" d="M25.6 27.6c-.8-.3-1.1.4-1.7.7-1.3.7-3.3.7-4.8.1-.3-.1-1.4-1-1.6-.3-.1.5.9.9 1.5 1.1 1.9.7 3.7.5 5.2-.2.5-.3 1.6-.6 1.4-1.4zM17.4 8.1c.1-.1.1-.2.2-.3-.1.1-.2.2-.2.3z"/>
+                                      <path fill="#333935" d="M50.8 58.7c2.1 1.1 5.1 1.1 6.9 0 1.4-.9 2.2-2.5 3.2-4 1.6-2.5 3.5-5.8 3.9-9.3v-1.8c-.5-2.5-1.7-4.3-2.7-6.3-.9-1.6-1.7-3.1-2.6-4.5-1.5-2.3-3.4-5.1-5.5-6.8-.4-.3-.9-.5-1-.8-.1-.2-.1-.6-.2-1-.1-.8-.3-1.4-.4-2.1-.1-.4-.2-1-.2-1.1 0-.3.4-.5.7-.9 1.2-1.4 2-3.8 1.5-6.3-.1-.4-.5-1.2-.5-1.5 0-.4.6-1.1.8-1.5.8-1.5 1.6-3.5 1.4-5.7C55.9 2 53.6.4 50.8-.1h-1.5C46.6.4 45 2 44.2 4.4 41 3.2 36.9 2.3 32.5 2.3h-.4c-4.3 0-8.4.9-11.5 2.1C19.8 2 18.2.5 15.5-.1H14c-2.7.6-5 2.2-5.2 5.3-.2 2.1.6 4.1 1.4 5.7.2.5.8 1.1.8 1.5 0 .3-.4 1.1-.5 1.5-.6 2.5.3 4.9 1.5 6.3.3.3.6.6.7.9 0 .1-.1.7-.2 1.1-.1.7-.3 1.3-.4 2.1-.1.4-.1.8-.2 1-.1.3-.6.5-1 .8-2.1 1.7-4 4.5-5.5 6.8-.9 1.3-1.7 2.9-2.6 4.5-1.1 2-2.2 3.8-2.7 6.3v1.8C.6 49 2.4 52.2 4 54.8c1 1.5 1.8 3.1 3.2 4 1.8 1.1 4.8 1.1 6.8 0 1.1 3.2 3.1 7.8 2.8 12.1 0 .3-.1.9-.2 1.1-.3 1-1 2-1.6 3-.6 1.1-1.1 2.1-1.7 3.1-1.3-2.4-2-5.4-4.8-6.2-.8-.2-1.5-.2-2.1 0C3.5 73 3.1 79 4.6 82c-1 1.3-2 2.4-1.8 4.7.1.7.3 1.5.5 2.2 2.5 10.8 14.3 13.4 26.7 13.9h4.8c12.4-.6 24.2-3.2 26.7-13.9.2-.7.4-1.5.5-2.2.2-2.3-.9-3.4-1.8-4.7 1.5-3 1.2-9-1.9-10.1-.6-.2-1.3-.2-2.1 0-2.8.8-3.5 3.8-4.8 6.2-.6-1-1.1-2.1-1.7-3.1-.5-1-1.3-2-1.6-3.1-.1-.2-.2-.7-.2-1.1-.3-4.2 1.8-8.8 2.9-12.1zm2.7-6.8c-1.2 1.3-2.2 3.2-4.7 2.4-.7-.2-1.7-.8-2.5-1.3s-1.6-1.1-1.8-1.9c-.4-1.6.5-3 1.1-3.9.8-1.2 1.5-1.9 3.4-1.7 1.9.2 3.8 1.5 5.3 2.4.5.3 1.2.7 1.3 1.3.1 1-1.6 2.1-2.1 2.7zM22 77c.6-.4 1.4-.8 1.7-1.5.2-.6.1-1.2.1-1.7.4-4.2 2.6-6.6 7.1-7 .5 0 1-.1 1.5-.1s1 0 1.5.1c4.5.4 6.7 2.8 7.1 7 0 .5 0 1.1.1 1.7.2.7 1.1 1.2 1.7 1.5.7.4 1.6.9 1.7 1.6 0 .9-1 1.9-1.7 2.4-.9.7-1.8 1.1-2.7 1.5-2.2.9-4.9 1.3-7.7 1.4-2.8 0-5.5-.5-7.7-1.4-.8-.3-1.7-.8-2.7-1.5-.6-.5-1.7-1.5-1.7-2.4.1-.7 1.1-1.2 1.7-1.6zm10.4-24h-.1-.1H32.4zm20-34.2c-.5-.9-1.4-1.6-2.3-2.1 1-2.8-3.7-3.2-3.3-.4-.5.1-.9.3-1.4.4.1-3.1 1.8-5.7 3.8-6.8.9-.1 1.5.3 2 .7 1.7 1.5 2.9 6 1.2 8.2zM15.3 2.1c2.6.2 3.8 3 3.8 5.7 3-2 7.9-3.3 13.1-3.3h.4c5.2 0 10.1 1.3 13.1 3.3 0-2.7 1.2-5.4 3.8-5.7 1.8-.2 3.8.9 4.2 2.4-1.4-.7-3.6-1.2-4.9-.1-.9.8-1.3 2.1-1.6 3.4.1.1.1.2.2.3.3.4.5.4.8 1-3.8 1.9-4.3 7.6-4.3 10.7 0 0-7-1.7-11.4-1.7h-.1-.1c-4.4 0-11.4 1.7-11.4 1.7 0-3.1-.5-8.8-4.3-10.7.3-.6.5-.6.8-1 .1-.1.1-.2.2-.3-.3-1.3-.7-2.6-1.6-3.4-1.2-1-3.5-.6-4.9.1.4-1.4 2.4-2.5 4.2-2.4zm-2.9 16.7c-1.7-2.1-.5-6.7 1.1-8.3.4-.4 1.1-.8 2-.7 2 1.2 3.7 3.7 3.8 6.8-.5-.1-.9-.3-1.4-.4.5-2.8-4.3-2.4-3.3.4-.8.6-1.6 1.2-2.2 2.2zm-1.1 33.1c-.5-.5-2.2-1.7-2.1-2.7 0-.6.8-1 1.3-1.3 1.5-.9 3.4-2.2 5.3-2.4 1.9-.3 2.6.4 3.4 1.7.6 1 1.5 2.3 1.1 3.9-.2.8-1 1.4-1.8 1.9s-1.8 1.1-2.5 1.3c-2.5.7-3.6-1.2-4.7-2.4zM7.3 74c1.1-.3 2.1 1 2.5 1.7.5.8.8 1.7 1.3 2.8.6 1.2 1 1.7 1.6 2.6.5.8 1.2 2.2.9 3.1-.2.8-1.5 1.3-2.8 1.1-.8-.1-1.9-.9-2.5-1.6-1.2-1.3-2.5-3-2.5-5.7.1-1.3.4-3.7 1.5-4zM52 81.2c.6-.9 1-1.4 1.6-2.6.6-1.1.9-2 1.3-2.8.5-.8 1.4-2 2.5-1.7 1.1.3 1.4 2.7 1.4 4 0 2.7-1.2 4.4-2.5 5.7-.7.7-1.8 1.5-2.5 1.6-1.3.2-2.6-.3-2.8-1.1-.2-1 .6-2.4 1-3.1zm-1.8 4.2c.7.6 1.8 1.3 3.1 1.3 2.4 0 4-2 5.1-3.3.6.5 1.7 1.4 1.5 2.7-.1.6-1.1 1.3-2.1 1.6-1 .3-2.2.4-3.2.5-2.5.1-5.1 0-7.3 0H17.7c-2.3 0-4.9.1-7.3 0-1 0-2.2-.1-3.2-.5-1-.3-2-1-2.1-1.6-.2-1.3.9-2.2 1.5-2.7 1.1 1.3 2.6 3.3 5.1 3.3 1.2 0 2.4-.7 3.1-1.3 1.7.6 3.6.5 5.9.5h23.8c2.1 0 4.1.1 5.7-.5zM7 45.3c-1.6 1.1-3.2 2-3.5 4.1-.7-1.7-1.7-3.5-1.3-5.9.3-1.5 1.3-3.2 2.1-4.6 1.5-2.9 3.1-5.6 5.1-8.2 1.3-1.6 2.7-3.3 4.5-4 1-.4 2.6-.6 3.5-.3 0-2.2 1.6-3.6 3.7-3.8 2.5-.2 4.4.7 4.3 3.3H39c-.1-2.6 1.8-3.6 4.3-3.3 2.1.2 3.7 1.6 3.7 3.8 1-.2 2.6 0 3.5.3 1.9.7 3.3 2.4 4.5 4 2 2.6 3.6 5.4 5.1 8.2.8 1.4 1.8 3.1 2.1 4.6.4 2.4-.6 4.1-1.3 5.9-.4-2.2-2-3-3.5-4.1-2.8-2-5.3-3.6-8.7-4.7-4.7-1.5-10.8-2-16.6-2-5.9 0-11.9.5-16.6 2-3.2 1.1-5.7 2.8-8.5 4.7z"/>
+                                      <path fill="#333935" d="M40.8 26.3c.1-2.6 5-2.1 4.9.3-1.2 1.1-4.1.9-4.9-.3z"/>
+                                      <path fill="#333935" d="M39.2 27.6c.8-.3 1.1.4 1.7.7 1.3.7 3.3.7 4.8.1.3-.1 1.4-1 1.6-.3.1.5-.9.9-1.5 1.1-1.9.7-3.7.5-5.2-.2-.5-.3-1.6-.6-1.4-1.4zM47.4 8.1c-.1-.1-.1-.2-.2-.3.1.1.1.2.2.3z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="c-header__lockup-block">
+                                <h2 class="c-header__name">Andrew Hipp</h2>
+                                <h3 class="u-spacing-flush">Front End Developer</h3>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </header>
+
+        <div class="o-page__main">

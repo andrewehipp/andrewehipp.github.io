@@ -1,5 +1,19 @@
-<footer id="c-footer">
-	<div class="o-container">
-        <a href="http://www.linkedin.com/pub/andrew-hipp/32/457/254/" target="_blank">&copy; Andrew Hipp 2017</a>
-    </div>
-</footer>
+    </div><!-- /.o-page__main -->
+
+    <footer class="o-page__footer c-footer c-line-board">
+
+        <canvas class="c-line-board__canvas c-footer__canvas js-footer-canvas"></canvas>
+
+        <div class="o-container">
+
+            <p>Need to improve your web presence or an employer looking to hire?<br>
+                <a href="mailto:{{ site.email }}">Please get in touch</a>.</p>
+
+            <p class="u-color-grey"><small>&copy; Andrew Hipp {{ 'now' | date: "%Y" }}</small></p>
+
+        </div>
+    </footer>
+
+    <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+
+<div><!-- /.o-page -->

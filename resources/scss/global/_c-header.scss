@@ -3,6 +3,93 @@
 \*------------------------------------*/
 
 .c-header {
-    padding: spacer(1) 0;
+    overflow: hidden;
+    padding: 10px 0;
     margin-bottom: spacer(1);
+    color: color('black');
+    text-shadow: 1px 1px 0 #fff;
+    font-weight: bold;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        margin-bottom: -5px;
+        height: 150px;
+        width: 105%;
+        background: color('black');
+        position: absolute;
+        bottom: 100%;
+        left: -2.5%;
+        z-index: 1;
+        transform: rotate(1deg);
+        transform-origin: left center;
+    }
+
+    a {
+        color: inherit;
+
+        @include link-states() {
+            text-decoration: none;
+        }
+
+    }
+
+}
+
+.c-header__canvas {
+    left: -3%;
+    transform-origin: left center;
+    transform: rotate(-2deg);
+
+}
+
+.c-header__content {
+    padding: 3vmin 0;
+}
+
+
+.c-header__title {
+    color: color('body');
+
+    @include link-states() {
+        text-decoration: none;
+    }
+
+}
+
+.c-header__logo {
+    display: block;
+    margin-bottom: 0;
+    width: 40px;
+    height: auto;
+
+    @include media('sm') {
+        width: 64px;
+    }
+
+}
+
+.c-header__name {
+    margin-bottom: 0;
+    font-size: rem(20px);
+
+    @include media('sm') {
+        font-size: rem(30px);
+    }
+
+}
+
+
+.c-header__contact {
+    margin-bottom: 0;
+}
+
+.c-header__lockup {
+    display: flex;
+    align-items: center;
+}
+
+.c-header__lockup-block {
+    margin-right: spacer(1);
 }

@@ -2,48 +2,6 @@
     #GRID
 \*------------------------------------*/
 
-///
-// Grid Configuration
-//
-// [1] Number of columns in the grid layout
-// [2] Breakpoints from '$breakpoints-config' to build the grid system with.
-//     Only include the ones you use. Use 'deprecated-selectors' in qa-debug to
-//     test when removing them.
-// [3] Column gutters, anything additional items other than `initial` builds
-//     out modifier classes
-// [4] Generate offset modifier classes for layout items that push content to
-//     the right as if the set number of columns was to the left of it.
-// [5] Generate source ordering modifier classes for layout items so you can
-//     swap the stacking on mobile verses desktop.
-///
-
-$grid-config: (
-    'columns':       12,
-    'breakpoints': (
-        'sm',
-        'md',
-        'lg'
-    ),
-    'gutters': (
-        'initial':   30px
-    ),
-    'offsets':       false,
-    'push-and-pull': false
-);
-
-
-// Store $grid-config map as variables...
-$grid-breakpoints:      map-get($grid-config, 'breakpoints');
-$grid-gutters:          map-get($grid-config, 'gutters');
-$grid-gutters-initial:  map-get($grid-gutters, 'initial');
-$grid-columns:          map-get($grid-config, 'columns');
-$grid-offsets:          map-get($grid-config, 'offsets');
-$grid-push-and-pull:    map-get($grid-config, 'push-and-pull');
-
-
-
-
-
 /**
  * Layout row
  *
@@ -75,8 +33,6 @@ $grid-push-and-pull:    map-get($grid-config, 'push-and-pull');
     }
 
 }
-
-
 
 
 
