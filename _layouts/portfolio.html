@@ -1,7 +1,6 @@
 {% include header.html %}
 
 
-
 <main id="main" role="main">
     <div class="o-container">
 
@@ -65,13 +64,13 @@
                                         {% assign height = section.browser.height | plus: 0.0 %}
                                         {% assign fraction = height | divided_by: width %}
 
-                                        <div class="o-aspect u-spacing-flush" style="padding-top: {{ fraction | times: 100 }}%">
+                                        <div class="o-aspect u-spacing-flush" style="padding-top: {{ fraction | times: 100 }}%; background: {{ page.theme }}">
                                             <img src="/assets/img/portfolio/{{ section.browser.source }}" alt="" class="c-browser__img u-img-full">
                                         </div>
 
                                     {% else %}
 
-                                        <div class="o-aspect o-aspect--1440x900 u-spacing-flush">
+                                        <div class="o-aspect o-aspect--1440x900 u-spacing-flush" style="background: {{ page.theme }}">
                                             <video src="/assets/img/portfolio/{{ section.browser.source }}" loop muted playsinline></video>
                                         </div>
 
@@ -83,7 +82,7 @@
                             {% if section.mobile %}
                                 <div id="mobile-{{ forloop.index }}" class="c-mobile {% if section.browser %}c-mobile--overlap{% endif %}">
                                     <div class="c-mobile__inner">
-                                        <div class="o-aspect o-aspect--iphone6 u-spacing-flush">
+                                        <div class="o-aspect o-aspect--iphone6 u-spacing-flush" style="background: {{ page.theme }}">
 
                                         {% if section.mobile.type != "video" %}
                                             <img src="/assets/img/portfolio/{{ section.mobile.source }}" alt="" class="c-mobile__img u-img-full">

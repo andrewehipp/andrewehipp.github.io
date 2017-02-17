@@ -460,7 +460,7 @@
 	
 	WebFont.load({
 	    google: {
-	        families: ['Source Sans Pro:500,600']
+	        families: ['Source Sans Pro']
 	    }
 	});
 
