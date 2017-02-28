@@ -2,7 +2,7 @@ import scrollMonitor from 'scrollmonitor';
 
 
 
-// Lazy load the images.
+// Animate the things
 const nodes = [...document.querySelectorAll('.js-animate')];
 
 nodes.forEach((node) => {

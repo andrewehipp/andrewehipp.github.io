@@ -6,10 +6,12 @@
  * Portfolio grid layout using flexbox. Includes large and small thumbs.
  */
 .o-portfolio {
+    display: flex;
+    flex-direction: column;
     margin: 0 -5px -10px;
 
     @include media('xs') {
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
     }
 
@@ -37,7 +39,10 @@
 }
 
 .o-portfolio__item--large {
+    order: -1;
+
     @include media('sm') {
+        order: 0;
         width: 66.66667%;
     }
 }

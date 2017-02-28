@@ -172,11 +172,15 @@ figcaption {
  * Portfolio grid layout using flexbox. Includes large and small thumbs.
  */
 .o-portfolio {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
   margin: 0 -5px -10px; }
   @media (min-width: 480px) {
     .o-portfolio {
-      display: -ms-flexbox;
-      display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; } }
 
@@ -196,9 +200,14 @@ figcaption {
   .o-portfolio__item--gap {
     margin-left: 33.33333%; } }
 
-@media (min-width: 768px) {
-  .o-portfolio__item--large {
-    width: 66.66667%; } }
+.o-portfolio__item--large {
+  -ms-flex-order: -1;
+      order: -1; }
+  @media (min-width: 768px) {
+    .o-portfolio__item--large {
+      -ms-flex-order: 0;
+          order: 0;
+      width: 66.66667%; } }
 
 @media (max-width: 1023px) {
   .o-portfolio__item--important {
@@ -814,7 +823,7 @@ figcaption {
   opacity: 0;
   will-change: opacity, transform;
   transition: 0.4s ease-out;
-  transform: translateY(50px); }
+  transform: translateY(50px) scale(0.96); }
   .u-animate.is-animating {
     opacity: 1;
     transform: none; }

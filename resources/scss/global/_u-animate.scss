@@ -7,7 +7,7 @@
     opacity: 0;
     will-change: opacity, transform;
     transition: timer('normal') ease-out;
-    transform: translateY(50px);
+    transform: translateY(50px) scale(0.96);
 
     &.is-animating {
         opacity: 1;

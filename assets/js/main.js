@@ -57,6 +57,8 @@
 	__webpack_require__(7);
 	
 	__webpack_require__(8);
+	
+	__webpack_require__(9);
 
 /***/ },
 /* 1 */
@@ -349,7 +351,7 @@
 	
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 	
-	// Lazy load the images.
+	// Animate the things
 	var nodes = [].concat(_toConsumableArray(document.querySelectorAll('.js-animate')));
 	
 	nodes.forEach(function (node) {
@@ -452,11 +454,41 @@
 
 /***/ },
 /* 8 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	var keyCodes = {
+	    left: 37,
+	    right: 39
+	};
+	
+	var next = document.querySelector('.js-next-page');
+	var prev = document.querySelector('.js-prev-page');
+	
+	if (next && prev) {
+	    window.addEventListener('keydown', function (event) {
+	
+	        switch (event.keyCode) {
+	            case keyCodes.left:
+	                window.location = prev.href;
+	                break;
+	            case keyCodes.right:
+	                window.location = next.href;
+	                break;
+	            default:
+	                break;
+	        }
+	    });
+	}
+
+/***/ },
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var WebFont = __webpack_require__(9);
+	var WebFont = __webpack_require__(10);
 	
 	WebFont.load({
 	    google: {
@@ -465,7 +497,7 @@
 	});
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/* Web Font Loader v1.6.27 - (c) Adobe Systems, Google. License: Apache 2.0 */(function(){function aa(a,b,c){return a.call.apply(a.bind,arguments)}function ba(a,b,c){if(!a)throw Error();if(2<arguments.length){var d=Array.prototype.slice.call(arguments,2);return function(){var c=Array.prototype.slice.call(arguments);Array.prototype.unshift.apply(c,d);return a.apply(b,c)}}return function(){return a.apply(b,arguments)}}function p(a,b,c){p=Function.prototype.bind&&-1!=Function.prototype.bind.toString().indexOf("native code")?aa:ba;return p.apply(null,arguments)}var q=Date.now||function(){return+new Date};function ca(a,b){this.a=a;this.m=b||a;this.c=this.m.document}var da=!!window.FontFace;function t(a,b,c,d){b=a.c.createElement(b);if(c)for(var e in c)c.hasOwnProperty(e)&&("style"==e?b.style.cssText=c[e]:b.setAttribute(e,c[e]));d&&b.appendChild(a.c.createTextNode(d));return b}function u(a,b,c){a=a.c.getElementsByTagName(b)[0];a||(a=document.documentElement);a.insertBefore(c,a.lastChild)}function v(a){a.parentNode&&a.parentNode.removeChild(a)}
